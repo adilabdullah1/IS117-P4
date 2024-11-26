@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- DEVELOPER: Adil Abdullah, IS117-001, Spring 2024 -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Language Learning Platform</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Main Project/css/styles.css">
+    <style>
+        /* Card Flip Effect */
+        .card-container {
+            perspective: 1000px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 600%;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            /* Set a fixed height for the image */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Card flip effect */
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card .card-front,
+        .card .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backface-visibility: hidden;
+            border-radius: 30px;
+        }
+
+        .card .card-back {
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            transform: rotateY(180deg);
+        }
+
+        .card .card-back h5 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Adjust Card Layout */
+        .card-header {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .card-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .card-footer .btn {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-light p-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../Main Project/index.html">LanguagePlatform</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../Main Project/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Main Project/pages/courses.html">Courses</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../Main Project/pages/about.html">About Us</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="../Main Project/pages/community.html">Community</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Main Project/pages/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h1 class="text-center">Welcome to Our Language Learning Platform</h1>
+        <p class="main-content">Start your journey by exploring our interactive courses, native-speaking tutors, and
+            thriving community.</p>
+        <br>
+        <center> <h4> Hover over the pictures below to see more! </h4> </center>
+        <br>
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Card 1: Courses -->
+            <div class="col card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="../Main Project/images/1.png" alt="Courses">
+                    </div>
+                    <div class="card-back">
+                        <div>
+                            <h5>Courses</h5>
+                            <p>Explore a variety of language courses for all proficiency levels. Start your journey from
+                                beginner to advanced!</p>
+                            <a href="../Main Project/pages/courses.html" class="btn btn-primary">View Courses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Tutors -->
+            <div class="col card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="../Main Project/images/2.png" alt="Tutors">
+                    </div>
+                    <div class="card-back">
+                        <div>
+                            <h5>Our Tutors</h5>
+                            <p>Learn from native-speaking tutors who will guide you to fluency with personalized
+                                sessions.</p>
+                            <a href="../Main Project/pages/our-tutors.html" class="btn btn-primary">View Tutors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Community -->
+            <div class="col card-container">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="../Main Project/images/3.png" alt="Community">
+                    </div>
+                    <div class="card-back">
+                        <div>
+                            <h5>Join Our Community</h5>
+                            <p>Connect with other learners, share tips, and get support on your language learning
+                                journey.</p>
+                            <a href="../Main Project/pages/community.html" class="btn btn-primary">Join Community</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <!-- Call to Action -->
+        <div class="card-footer">
+            <h2>Start Learning Today!</h2>
+            <p>Choose your language and begin your journey with us. Whether you're a beginner or an advanced learner, we
+                have something for everyone.</p>
+            <a href="../Main Project/pages/courses.html" class="btn btn-primary">Explore Courses</a>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center p-3">
+        <p>&copy; 2024 Language Learning Platform | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
